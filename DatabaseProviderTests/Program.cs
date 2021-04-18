@@ -215,7 +215,7 @@ namespace DatabaseProviderTests
         private static async Task<IDatabaseController> GetMySQLController()
         {
             IDatabaseController databaseController = new MySQLController();
-            await databaseController.ConnectToDatabase("localhost", "workshop", "root", "TestPassword", "DebugEnabled");
+            await databaseController.ConnectToDatabase("web.ds-host.ru", "thecpu_workshop", "thecpu_workshop", "R8i0L6d8", "DebugEnabled");
             return databaseController;
         }
 

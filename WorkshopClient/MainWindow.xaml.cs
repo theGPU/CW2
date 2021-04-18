@@ -41,9 +41,9 @@ namespace WorkshopClient
 
         public MainWindow()
         {
-            AllocConsole();
-            LogManager.LogFactory = new ConsoleLogFactory(debugEnabled: true);
-            DatabaseProvider.Init("MySQL", new string[] { "localhost", "workshop", "root", "TestPassword" });
+            //AllocConsole();
+            //LogManager.LogFactory = new ConsoleLogFactory(debugEnabled: true);
+            DatabaseProvider.Init("MySQL", new string[] { "web.ds-host.ru", "thecpu_workshop", "thecpu_workshop", "R8i0L6d8" });
             InitializeComponent();
             OrderDetalsGrid.Visibility = Visibility.Hidden;
             JobDetalsGrid.Visibility = Visibility.Hidden;
