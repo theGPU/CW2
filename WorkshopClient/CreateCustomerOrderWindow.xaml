@@ -1,0 +1,39 @@
+﻿<Window x:Class="WorkshopClient.CreateCustomerOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopClient"
+        mc:Ignorable="d"
+        Title="CreateCustomerOrderWindow" Height="450" Width="400" MinHeight="450" MinWidth="400">
+    <Grid Background="#FF222226" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Content="Создание нового заказа" Foreground="White" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Заказчик: " Foreground="White" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="1"/>
+        <ComboBox x:Name="CustomerComboBox" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="90,0,0,0"/>
+        <Label Content="Дата заказа: " Foreground="White" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2"/>
+        <DatePicker x:Name="OrderDatePicker" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="130,0,0,0"/>
+        <Label Content="Тип заказа: " Foreground="White" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="3"/>
+        <TextBox x:Name="OrderTypeTextBox" Foreground="White" Background="#FF444446" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="110,5,0,0" Width="250" FontSize="16"/>
+        <Label Foreground="White" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20" Content="Описание заказа" Grid.Row="4"/>
+        <ScrollViewer Grid.Row="5" VerticalScrollBarVisibility="Auto">
+            <TextBox x:Name="OrderDescriptionTextBox" Background="#FF444446" TextWrapping="Wrap" Foreground="White"/>
+        </ScrollViewer>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="CancelButton" Content="Отмена" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Click="CancelButton_Click"/>
+            <Button x:Name="SaveButton" Content="Сохранить" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Click="SaveButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

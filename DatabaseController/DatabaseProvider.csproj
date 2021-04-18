@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="5.0.10" />
+    <PackageReference Include="ServiceStack.OrmLite.Core" Version="5.10.4" />
+    <PackageReference Include="ServiceStack.OrmLite.MySql.Core" Version="5.10.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTO\Shared\" />
+  </ItemGroup>
+
+</Project>

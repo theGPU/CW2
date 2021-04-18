@@ -1,0 +1,34 @@
+﻿<Window x:Class="WorkshopClient.JobComponentsChangeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopClient"
+        mc:Ignorable="d"
+        Title="JobComponentsChangeWindow" Height="200" Width="400" MinHeight="200" MinWidth="400">
+    <Grid Background="#222226">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="MainLabel" Content="Изменение использованных компонентов в работе #" Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-4,0,0"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="ComponentsGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions></Grid.RowDefinitions>
+            </Grid>
+        </ScrollViewer>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="CancelButton" Content="Отмена" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Click="CancelButton_Click"/>
+            <Button x:Name="SaveButton" Content="Сохранить" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Click="SaveButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>

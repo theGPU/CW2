@@ -1,0 +1,43 @@
+﻿<Window x:Class="WorkshopClient.CreateComponentsOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkshopClient"
+        mc:Ignorable="d"
+        Title="CreateComponentsOrderWindow" Height="450" Width="400" MinHeight="450" MinWidth="400">
+    <Grid Background="#FF222226">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Label Foreground="White" Content="Создание заказа компонентов" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid x:Name="ComponentsGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions></Grid.RowDefinitions>
+            </Grid>
+        </ScrollViewer>
+        <Label Grid.Row="2" Foreground="White" Content="Цена:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <TextBox x:Name="PriceTextBox" Grid.Row="2" Foreground="White" VerticalAlignment="Center" Width="100" FontSize="16" HorizontalAlignment="Left" Margin="70,0,0,0" Background="#FF444446"/>
+        <Label Grid.Row="3" Foreground="White" Content="Дата заказа:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <DatePicker x:Name="OrderDatePicker" Grid.Row="3" VerticalAlignment="Center" Background="#FF444446" Width="200" Margin="70,0,0,0"/>
+        <Label Grid.Row="4" Foreground="White" Content="Дата привоза:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"/>
+        <DatePicker x:Name="ArrivalDatePicker" Grid.Row="4" VerticalAlignment="Center" Background="#FF444446" Width="200" Margin="100,0,0,0"/>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="CancelButton" Content="Отмена" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Click="CancelButton_Click"/>
+            <Button x:Name="SaveButton" Content="Сохранить" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Click="SaveButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
